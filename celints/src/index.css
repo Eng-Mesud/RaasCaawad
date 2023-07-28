@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.homeBage{
+    background-image: url(https://www.neuhauschocolates.com/dw/image/v2/BFRH_PRD/on/demandware.static/-/Library-Sites-NeuhausSharedLibrary/default/dw93f60549/Homepage/65years-HP-Mainbanner-Desktop.gif?sw=1920&sfrm=png&q=95);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+}

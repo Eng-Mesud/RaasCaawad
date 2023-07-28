@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@1,100&family=Poppins:ital,wght@0,200;0,300;0,400;0,600;0,700;1,500;1,700;1,800&family=Titan+One&display=swap');
+
+
+*{
+    margin: 0;
+    top: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.loginBage{
+    background-image: url(./Image/four.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
