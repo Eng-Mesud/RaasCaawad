@@ -33,10 +33,11 @@ function Footer() {
          </div>
 
          <div>
-         <h1 className='text-2xl font-semibold'>Products </h1>
-          <li>Snackers</li>
-          <li>tofafo</li>
-          <li>wacht</li>
+         <h1 className='text-2xl font-semibold'>location </h1>
+          <li>bakaaro, 
+            Mogadishu, 
+            Somalia</li>
+      
          </div>
 
          

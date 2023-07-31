@@ -8,9 +8,9 @@ function Services() {
     const [data,setdata] = useState([]);
 
     useEffect(()=> {
-        axios.get('http://localhost:5000/productslist')
+        axios.get('http://localhost:5000/getProductsListHomebageslimit20')
         .then(res => {
-            setdata(res.data.productList)
+            setdata(res.data.productListLimit)
         })
         .catch(err => console.log(err))
     },[])
@@ -20,15 +20,15 @@ function Services() {
 
 
         <div className="container max-w-7xl m-auto mt-5">
-            <div className="row grid grid-cols-3 md:grid-cols-4 gap-4  p-2">
+            <div className="row grid  grid-cols-1 md:grid-cols-4 gap-2  p-2">
                 {
 
                     data.map((dataProducts,i) =>(
                       <Link to={`/productslist/${dataProducts._id}`} key={i}>
-                        <div className="">
-                        <img src={`http://localhost:5000/images/${dataProducts.image}`} className='md:h-96 md:w-96 w-64 h-64 rounded-lg' alt="" srcset="" />
+                        <div className="bg-slate-100 border">
+                        <img src={`http://localhost:5000/images/${dataProducts.image}`} className='md:h-96 md:w-96 w-full h-full rounded-lg' alt="" srcset="" />
         
-                        <p className="text-2xl text-center">
+                        <p className="text-2xl text-center p-2">
                            {dataProducts.ProductName}
                         </p>
         

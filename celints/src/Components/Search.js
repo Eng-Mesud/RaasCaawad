@@ -2,7 +2,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom';
-
+import notfound from '../image/not_found-67b0ab60459a252a50ebc221e99e77f9caf41a31062a7b3efe67388a541a6867.png'
 
 const  Search =({match})  =>{
 
@@ -19,7 +19,7 @@ const  Search =({match})  =>{
 
  return(
     <div className='max-w-7xl m-auto p-2 h-full '>
-    <h1 className="text-5xl">Result products <span className="text-rose-300">not founded</span></h1>
+    {/* <h1 className="text-5xl">Result products <span className="text-rose-300">not founded</span></h1> */}
 {
      productsDataFilter.length > 0 ? (
 
@@ -51,7 +51,7 @@ const  Search =({match})  =>{
               
             </div>
 
-):<h1 className='text-rose-300 text-center grid-cols-1 grid text-5xl mt-5'>Products has not founded</h1>
+):<img src={notfound} alt=''  className='md:w-40 md:h-40 items-center md:ml-40'/>
             }
 </div>
  )

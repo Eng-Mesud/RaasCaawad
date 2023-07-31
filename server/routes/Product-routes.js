@@ -1,5 +1,5 @@
 import multer from "multer";
-import { AddProducts, ProductsSearch, Searcupdateid, deleteProducts, getImage, getProduct_id, getProduct_id_Inf, getProductsCount, getProductsList, getProductsListLets_INFORMATION, getProductsPublishedCount, getProductsUnPublishedCount, publishedUpdated, upload } from "../controller/Products.js"
+import { AddProducts, ProductsSearch, Searcupdateid, deleteProducts, getImage, getProduct_id, getProduct_id_Inf, getProductsCount, getProductsList, getProductsListHomebageslimit20, getProductsListLets_INFORMATION, getProductsPublishedCount, getProductsUnPublishedCount, publishedUpdated, upload } from "../controller/Products.js"
 
 
 import express from 'express'
@@ -22,3 +22,8 @@ RoutesProducts.get('/Searcupdateid/:id',Searcupdateid);
 RoutesProducts.get('/getProductsCount',getProductsCount);
 RoutesProducts.get('/getProductsPublishedCount',getProductsPublishedCount)
 RoutesProducts.get('/getProductsUnPublishedCount',getProductsUnPublishedCount)
+
+
+//getProductsListHomebageslimit20 
+
+RoutesProducts.get('/getProductsListHomebageslimit20',getProductsListHomebageslimit20);

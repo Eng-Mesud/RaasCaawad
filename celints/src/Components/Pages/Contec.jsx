@@ -32,7 +32,7 @@ function Contec() {
         .catch(err => console.log(err))
     }
   return (
-    <div className='mt-10 '>
+    <div className=' pt-10'>
         <div className="container max-w-7xl m-auto">
             <div className="row bg-slate-100 border  p-4 rounded grid md:grid-cols-2 grid-cols-1 gap-2">
                 <div className="img"> 

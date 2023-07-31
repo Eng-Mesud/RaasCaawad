@@ -14,6 +14,8 @@ import SearchCategreis from './Components/Pages/SearchCategreis'
 import Search from './Components/Search'
 import axios from 'axios'
 import Contec from './Components/Pages/Contec'
+import Galery from './Components/Pages/galery'
+import AboutUs from './Components/Pages/AboutUs'
 
 function App() {
   // axios.defaults.withCredentials=true;
@@ -27,6 +29,8 @@ function App() {
           <Route path='/Products' element={<ProductsDetails/>}/>
           <Route path='/search/:keyword' element={<Search/>}/>
           <Route path='/Contect' element={<Contec/>}/>
+          <Route path='/galery' element={<Galery/>}/>
+          <Route path='/about' element={<AboutUs/>}/>
           <Route path='/ProductslinkSearch-Categreis/:id' element={<SearchCategreis/>}/>
 
         </Routes>

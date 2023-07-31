@@ -5,11 +5,11 @@ function Costomer() {
     <div className='mt-5'>
         <div className="conntainer max-w-7xl m-auto ">
             <div className="bg-slate-300 p-4">
-                <div className="row grid grid-cols-3">
+                <div className="row grid md:grid-cols-3 grid-cols-1">
                     <div className="  ">
                     <img src={food} className='h-96 w-96' alt="" srcset="" />
                     </div>
-                    <div className="col-span-2 mt-20">
+                    <div className="col-span-2 ">
                         <p className='text-2xl items-center justify-center font-extrabold'>
                        Featured News
                        BEN'S ORIGINAL™ announces two programs in North America that deliver its Purpose

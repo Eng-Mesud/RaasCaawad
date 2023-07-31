@@ -82,6 +82,27 @@ export const getProductsList = async (req, res, next) => {
 }
 
 
+
+
+//homebage
+
+export const getProductsListHomebageslimit20 = async (req, res, next) => {
+    let productListLimit;
+
+
+    try {
+        productListLimit =await CreateProducts.find().limit(12)
+    }
+    catch(err) {
+        return res.status(404).json({message:"Eroro product"})
+    }
+
+    if(!productListLimit.length >0) {
+     return res.status(404).json({message:"table not found"})
+    }
+    return res.status(200).json({productListLimit})
+}
+
 //count
 
 export const getProductsCount=async (req, res, next) => {

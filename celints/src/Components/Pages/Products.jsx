@@ -15,19 +15,19 @@ function ProductsDetails() {
         .catch(err => console.log(err))
     },[])
   return (
-    <div className='pt-40'>
+    <div className='pt-10'>
         <h1 className='text-4xl text-center mt-2' >Products</h1>
 
 
         <div className="container max-w-7xl m-auto mt-5">
-            <div className="row grid grid-cols-3 gap-3">
+            <div className="row grid  grid-cols-1 md:grid-cols-4 gap-3 p-2">
                 {
                     data.map((dataProducts,i) =>(
                       <Link to={`/productslist/${dataProducts._id}`} key={i}>
-                        <div className="">
+                        <div className="bg-slate-100 border ">
                         <img src={`http://localhost:5000/images/${dataProducts.image}`} className='h-96 w-96 rounded-lg' alt="" srcset="" />
         
-                        <p className="text-2xl">
+                        <p className="text-2xl p-2">
                            {dataProducts.ProductName}
                         </p>
         
@@ -42,9 +42,7 @@ function ProductsDetails() {
               
             </div>
 
-            <div className="text-center mt-3">
-                <button className='bg-sky-300 p-2 w-64 rounded'>Se All</button>
-            </div>
+          
 
          
         </div>
