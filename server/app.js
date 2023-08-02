@@ -25,7 +25,7 @@ app.use(express.static("upload"));
 // app.use('./images' , express.static(__dirname + './images'));
 // app.use('/static', express.static(__dirname, 'public'))
 mongoose.connect(
-    "mongodb+srv://forTesting:test123@cluster0.fzmcorz.mongodb.net/raasCawad?retryWrites=true&w=majority"
+   process.env.MONG_URL
 )
 .then(()=>app.listen(5000)
 )
