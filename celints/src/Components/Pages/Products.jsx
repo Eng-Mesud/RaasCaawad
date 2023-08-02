@@ -25,7 +25,7 @@ function ProductsDetails() {
                     data.map((dataProducts,i) =>(
                       <Link to={`/productslist/${dataProducts._id}`} key={i}>
                         <div className="bg-slate-100 border ">
-                        <img src={`https://raas-caawad-server.vercel.app/images/${dataProducts.image}`} className='h-96 w-96 rounded-lg' alt="" srcset="" />
+                        <img src={`https://raas-caawad-server.vercel.app/images/`+dataProducts.image} className='h-96 w-96 rounded-lg' alt="" srcset="" />
         
                         <p className="text-2xl p-2">
                            {dataProducts.ProductName}
