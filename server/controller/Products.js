@@ -82,6 +82,23 @@ export const getProductsList = async (req, res, next) => {
 }
 
 
+export const imagegetId = async (req, res, next) => {
+     let imagesId;
+    const images =req.params.id
+
+    try {
+        imagesId =await CreateProducts.findById({image:images})
+    }
+    catch(err) {
+        return res.status(404).json({message:"Eroro product"})
+    }
+
+    if(!imagesId.length >0) {
+     return res.status(404).json({message:"table not found"})
+    }
+    return res.status(200).json({imagesId})
+}
+
 
 
 //homebage
