@@ -20,12 +20,14 @@ app.use(cors({
 }));
 
 app.use(cookieParser());
-app.use(express.static("upload"));
+// routes
+app.use('/images', express.static('upload/images'))
+// app.use(express.static("upload"));
 // app.use('./images' , express.static(path.join(__dirname + './images' ) ));
 // app.use('./images' , express.static(__dirname + './images'));
 // app.use('/static', express.static(__dirname, 'public'))
 mongoose.connect(
-   process.env.MONG_URL
+    "mongodb+srv://forTesting:test123@cluster0.fzmcorz.mongodb.net/raasCawad?retryWrites=true&w=majority"
 )
 .then(()=>app.listen(5000)
 )

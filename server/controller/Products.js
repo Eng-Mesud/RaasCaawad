@@ -84,10 +84,10 @@ export const getProductsList = async (req, res, next) => {
 
 export const imagegetId = async (req, res, next) => {
      let imagesId;
-    const images =req.params.id
+    const {images} =req.params
 
     try {
-        imagesId =await CreateProducts.findById({image:images})
+        imagesId =await CreateProducts.find({image:images})
     }
     catch(err) {
         return res.status(404).json({message:"Eroro product"})

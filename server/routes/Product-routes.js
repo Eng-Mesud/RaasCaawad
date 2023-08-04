@@ -23,7 +23,7 @@ RoutesProducts.get('/getProductsCount',getProductsCount);
 RoutesProducts.get('/getProductsPublishedCount',getProductsPublishedCount)
 RoutesProducts.get('/getProductsUnPublishedCount',getProductsUnPublishedCount)
 
-RoutesProducts.get('/image',imagegetId)
+RoutesProducts.get('/imagesid/:images',imagegetId)
 //getProductsListHomebageslimit20 
 
 RoutesProducts.get('/getProductsListHomebageslimit20',getProductsListHomebageslimit20);
