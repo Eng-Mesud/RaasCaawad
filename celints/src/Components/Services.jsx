@@ -4,11 +4,13 @@ import testImg1 from '../image/tharee.jpg'
 import testImg2 from '../image/one.jpg'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
+import { productsdata } from './data/Data'
+
 function Services() {
     const [data,setdata] = useState([]);
 
     useEffect(()=> {
-        axios.get('http://localhost:5000/getProductsListHomebageslimit20')
+        axios.get('https://raas-caawad-server.vercel.app/getProductsListHomebageslimit20')
         .then(res => {
             setdata(res.data.productListLimit)
         })
@@ -21,7 +23,7 @@ function Services() {
 
         <div className="container max-w-7xl m-auto mt-5">
             <div className="row grid  grid-cols-1 md:grid-cols-4 gap-2  p-2">
-                {
+                {/* {
 
                     data.map((dataProducts,i) =>(
                       <Link to={`/productslist/${dataProducts._id}`} key={i}>
@@ -35,7 +37,24 @@ function Services() {
                        </div>
                       </Link>
                     ))
-                }
+                } */}
+
+
+                        {
+
+                        productsdata.map((dataProducts,i) =>(
+                        <Link to={`/productslist/${dataProducts.id}`} key={i}>
+                            <div className="bg-slate-100 border">
+                            <img src={dataProducts.image} className='md:h-96 md:w-96 w-full h-full rounded-lg' alt="" srcset="" />
+
+                            <p className="text-2xl text-center p-2">
+                            {dataProducts.name}
+                            </p>
+
+                        </div>
+                        </Link>
+                        ))
+                        }
               
 
               
