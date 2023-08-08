@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
+import { productsdataAll } from '../data/Data';
 function Galery() {
   const [data,setdata] = useState([]);
 
@@ -26,7 +27,7 @@ function Galery() {
           </h1>
         </div>
     <div className="row grid grid-cols-3 md:grid-cols-6 gap-4  p-2">
-                {
+                {/* {
 
                     data.map((dataProducts,i) =>(
                       <Link to={`/productslist/${dataProducts._id}`} key={i}>
@@ -37,7 +38,21 @@ function Galery() {
                        </div>
                       </Link>
                     ))
-                }
+                } */}
+
+
+                              {
+
+                              productsdataAll.map((dataProducts,i) =>(
+                                <Link  key={i}>
+                                  <div className="">
+                                  <img src={dataProducts.image} className='md:h-64 rounded-2xl md:w-64 w-64 h-64 ' alt="" srcset="" />
+
+                                
+                                </div>
+                                </Link>
+                              ))
+                              }
               
 
               

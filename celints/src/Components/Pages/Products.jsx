@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 // import testImg2 from '../image/one.jpg'
 import {Link} from 'react-router-dom'
 import axios from 'axios';
+import { productsdataAll } from '../data/Data';
 function ProductsDetails() {
     const [data,setdata] = useState([]);
 
@@ -21,7 +22,7 @@ function ProductsDetails() {
 
         <div className="container max-w-7xl m-auto mt-5">
             <div className="row grid  grid-cols-1 md:grid-cols-4 gap-3 p-2">
-                {
+                {/* {
                     data.map((dataProducts,i) =>(
                       <Link to={`/productslist/${dataProducts._id}`} key={i}>
                         <div className="bg-slate-100 border ">
@@ -29,6 +30,22 @@ function ProductsDetails() {
         
                         <p className="text-2xl p-2">
                            {dataProducts.ProductName}
+                        </p>
+        
+                       </div>
+                      </Link>
+                    ))
+                } */}
+
+
+{
+                    productsdataAll.map((dataProducts,i) =>(
+                      <Link to={`/productslist/${dataProducts._id}`} key={i}>
+                        <div className="bg-slate-100 border ">
+                        <img src={dataProducts.image} className='h-96 w-96 rounded-lg' alt="" srcset="" />
+        
+                        <p className="text-2xl p-2">
+                           {dataProducts.name}
                         </p>
         
                        </div>
