@@ -198,11 +198,12 @@ function Header({history}) {
    <div className="contect  max-w-6xl m-auto">
     <div className="flex    ">
         <div className='flex space-x-3 p-2  items-centertext-center'>
-            <p><BsWhatsapp fontSize={25} /></p>
+        <a href="https://wa.me/252610973722"> <p><BsWhatsapp fontSize={25} /></p> </a>
             <a href="https://www.facebook.com/profile.php?id=100093105353671&mibextid=ZbWKwL"><p><GrFacebookOption fontSize={25}  /></p></a>
             
             <p><BsInstagram fontSize={25} /></p>
-            <p>tell / 2526172938</p>
+           <p>phone / 0610912189</p>
+           
         </div>
 
 
